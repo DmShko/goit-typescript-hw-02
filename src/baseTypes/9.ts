@@ -1,8 +1,11 @@
 /*
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
+type data = {
+  [key: string] : any;
+}
 
-const page1 = {
+const page1: data = {
   title: 'The awesome page',
   likes: 100,
   accounts: ['Max', 'Anton', 'Nikita'],
@@ -13,7 +16,7 @@ const page1 = {
   }
 }
 
-const page2 = {
+const page2: data = {
   title: 'Python or Js',
   likes: 5,
   accounts: ['Alex'],
