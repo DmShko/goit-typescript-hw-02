@@ -11,7 +11,7 @@ type AllType = {
   weight: number
 }
 
-function compare (top, bottom): AllType {
+function compare (top: Pick<AllType, 'name' | 'color'>, bottom: Pick<AllType, 'position' | 'weight'>): AllType {
   return {
     name: top.name,
     color: top.color,
@@ -20,4 +20,6 @@ function compare (top, bottom): AllType {
   }
 }
 
+// не розумію, чому використовується '|', а не '&'?
+// Я ж конкретні властивості з AllType хочу бачити у новому типі, тобто обов'язково.
 export {};
