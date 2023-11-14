@@ -1,8 +1,9 @@
 /*
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
+
 type data = {
-  [key: string] : any;
+  [key: string] : string | number | object | string[];
 }
 
 const page1: data = {
