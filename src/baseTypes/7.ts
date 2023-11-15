@@ -5,43 +5,20 @@
 
 enum TypeDayOfWeek {
 
-  Monday = 'workday',
-  Tuesday = 'workday',
-  Wednesday = 'workday',
-  Thursday = 'workday',
-  Friday = 'workday',
-  Saturday = 'weekend',
-  Sunday = 'weekend',
+  Monday ,
+  Tuesday ,
+  Wednesday ,
+  Thursday,
+  Friday ,
+  Saturday ,
+  Sunday ,
 
 };
 
-type day = {
-  monday : TypeDayOfWeek,
-  tuesday : TypeDayOfWeek,
-  wednesday : TypeDayOfWeek,
-  thursday : TypeDayOfWeek,
-  friday : TypeDayOfWeek,
-  saturday : TypeDayOfWeek,
-  sunday : TypeDayOfWeek,
-};
+const isWeekend = (day: TypeDayOfWeek): boolean => {
 
-const days: day = {
-  monday : TypeDayOfWeek.Monday,
-  tuesday : TypeDayOfWeek.Tuesday,
-  wednesday : TypeDayOfWeek.Wednesday,
-  thursday : TypeDayOfWeek.Thursday,
-  friday : TypeDayOfWeek.Friday,
-  saturday : TypeDayOfWeek.Saturday,
-  sunday : TypeDayOfWeek.Sunday,
-};
-
-function isWeekend(day: string): boolean {
+  return day === TypeDayOfWeek.Saturday || day === TypeDayOfWeek.Sunday;
   
-  if(days[day] === 'weekend') {
-    return true;
-  } else {
-    return false;
-  };
 };
 
-console.log(isWeekend('monday'));
+console.log(isWeekend(1));
